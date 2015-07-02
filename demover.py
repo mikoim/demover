@@ -15,7 +15,7 @@ class Demover:
     def move(source, destination, threshold=60):
         now = time.time()
 
-        for dem in filter(lambda name: os.path.isfile(name) and re.match('.+\.dem$', name), os.listdir(source)):
+        for dem in filter(lambda name: os.path.isfile(os.path.join(source, name)) and re.match('.+\.dem$', name), os.listdir(source)):
             src = os.path.join(source, dem)
             dest = os.path.join(destination, dem)
 
