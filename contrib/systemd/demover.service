@@ -1,0 +1,10 @@
+[Unit]
+Description=The demo(.dem) file mover for CS:S and CS:GO written in Python
+After=csgo.service
+
+[Service]
+Type=oneshot
+User=TYPE_YOUR_USER
+Group=TYPE_YOUR_GROUP
+WorkingDirectory=TYPE_YOUR_DIRECTORY
+ExecStart=/usr/bin/python3 demover.py TYPE_SRC_DIRECTORY TYPE_DEST_DIRECTORY
